@@ -1,0 +1,9 @@
+lldpd:
+  lookup:
+    package: lldpd
+    service: lldpd
+    # From man lldpd:
+    # -k   Disable advertising of kernel release, version and machine. Kernel name (ie: Linux) will
+    #      still be shared, and Inventory software version will be set to 'Unknown'.
+    # (currently only supported on Debian and FreeBSD)
+    flags: '-k'

@@ -1,0 +1,5 @@
+{% import_yaml "lldpd/osmap.yaml" as osmap %}
+
+{% set osfam = salt['grains.filter_by'](osmap, default='default') %}
+
+{% set lldpd = salt['pillar.get']('lldpd:lookup', default=osfam, merge=True) %}

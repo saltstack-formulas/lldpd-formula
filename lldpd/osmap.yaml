@@ -1,0 +1,4 @@
+default:
+  package: lldpd
+  service: lldpd
+  flags: '-k'
